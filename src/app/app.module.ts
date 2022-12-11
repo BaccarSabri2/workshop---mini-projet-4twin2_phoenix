@@ -13,6 +13,8 @@ import { JoinusComponent } from './Pages/joinus/joinus.component';
 import { LoginComponent } from './Pages/login/login.component';
 import { EditProfileComponent } from './Pages/edit-profile/edit-profile.component';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -28,10 +30,11 @@ import { HttpClientModule } from '@angular/common/http';
     EditProfileComponent,
   ],
   imports: [
+    FormsModule,
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
-  ],
+    HttpClientModule,
+      ],
   providers: [],
   bootstrap: [AppComponent]
 })

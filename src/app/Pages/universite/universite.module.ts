@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { UniversiteRoutingModule } from './universite-routing.module';
 import { UniversitesComponent } from './universites/universites.component';
 import { UniversiteDetailComponent } from './universite-detail/universite-detail.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -12,8 +13,10 @@ import { UniversiteDetailComponent } from './universite-detail/universite-detail
     UniversiteDetailComponent
   ],
   imports: [
+    FormsModule,
     CommonModule,
-    UniversiteRoutingModule
+    UniversiteRoutingModule,
+    ReactiveFormsModule
   ]
 })
 export class UniversiteModule { }
