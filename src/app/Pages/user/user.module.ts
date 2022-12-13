@@ -12,8 +12,8 @@ import { EditProfileComponent } from './edit-profile/edit-profile.component';
   declarations: [
     JoinusComponent,
     LoginComponent,
-    EditProfileComponent
-
+    EditProfileComponent,
+    
   ],
   imports: [
     CommonModule,

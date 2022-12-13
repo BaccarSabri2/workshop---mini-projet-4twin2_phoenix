@@ -25,7 +25,7 @@ export class AppComponent {
 
     
     this.loadScript('../assets/js/main.js');
-
+  
   
 
   }

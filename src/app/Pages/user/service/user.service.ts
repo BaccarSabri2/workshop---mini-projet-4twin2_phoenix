@@ -12,6 +12,7 @@ export class UserService {
 
 
   url = environment.backUrl;
+  private test: boolean;
 
 
   constructor(private http: HttpClient) { }
@@ -60,16 +61,26 @@ export class UserService {
     return decodedJwtData.user_id;
   }
 
+  isAuthenticated() {
 
-  isAuthenticated(): boolean {
-
-    const token: any = localStorage.getItem('auth');
-    return token;
+    var test = false;
+    if (localStorage.getItem('user') == null)
+      test = false;
+    else
+      test = true;
+    return test;
   }
+
   signOut() {
+
 
     localStorage.clear();
 
+
+  }
+ getAllEtudiants() :Observable<User[]> {
+   
+    return this.http.get<User[]>(this.url + '/etudiants/getAllEtudiants');
 
   }
 

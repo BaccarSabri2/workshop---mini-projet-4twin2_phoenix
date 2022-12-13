@@ -40,6 +40,7 @@
                         <a href="index.html" class="nav-item nav-link active">Home</a>
                         <a href="about.html" class="nav-item nav-link">About</a>
                         <a routerLink="/formation" class="nav-item nav-link">Formations</a>
+                        <a routerLink="/EtudiantAdmin" class="nav-item nav-link">Dashbord</a>
                         <a href="teacher.html" class="nav-item nav-link">Teachers</a>
                         <div class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" data-toggle="dropdown">Blog</a>
@@ -52,14 +53,25 @@
                     </div>
                     <a routerLink="/user/joinus" class="btn btn-primary py-2 px-3 ml-auto d-none d-lg-block">Join
                         Now</a>
+
+
                     <button [routerLink]="['/user/login']"
                         class="btn btn-primary py-2 px-3 ml-auto d-none d-lg-block bg-dark"
                         style="margin-left: 1%;">Login</button>
+
+
+
                 </div>
-                
-                <a routerLink="/user/editprofile" class="btn btn-outline ">
-                    <input type="submit" class="btn btn-primary py-2 px-3 ml-auto d-none d-lg-block bg-dark " name="btnAddMore" value="Edit Profile"/>
+
+                <a class="btn btn-outline" routerLink="/user/editprofile">
+                    <input type="submit" class="btn btn-primary py-2 px-3 ml-auto d-none d-lg-block bg-dark "
+                        name="btnAddMore" value="Edit Profile" />
                 </a>
+                <a *ngIf="test==true">
+                    <button class="btn btn-primary py-2 px-3 ml-auto d-none d-lg-block"
+                        (click)="signOut()">signOut</button>
+                </a>
+
             </nav>
         </div>
     </div>
