@@ -45,9 +45,8 @@ export class UniversiteService {
     return this._http.post<Universite>(this.universiteUrl,universite);
   }
 
-  deleteUniversite(universite:Universite):Observable<Universite>{
-    console.log("delete universite");
-    return this._http.delete<Universite>(this.universiteUrl+"/"+universite.idUniv);
+  deleteUniversite(id:number):Observable<any>{
+    return this._http.delete<any>(this.universiteUrl+"/"+id);
   }
 
   updateUniversite(universite:Universite):Observable<Universite>{

@@ -3,7 +3,7 @@ import { Departement } from "./departement";
 
 export class Universite{
     idUniv!: number;
-    nivea!: Niveau;
+    niveau!: Niveau;
     nomUniv!: string;
     description!: string;
     departemnts:Array<Departement> | undefined;

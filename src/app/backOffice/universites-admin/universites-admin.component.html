@@ -1,0 +1,96 @@
+<body id="page-top">
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+
+        <app-navbar-backoofice></app-navbar-backoofice>
+
+        <!-- Sidebar -->
+       
+        <!-- End of Sidebar -->
+
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
+
+            <!-- Main Content -->
+            <div id="content">
+
+                <!-- Topbar -->
+          
+                <!-- End of Topbar -->
+
+                <!-- Begin Page Content -->
+                <div class="container-fluid">
+           <br/>
+                    <!-- Page Heading -->
+                    <h1 class="h3 mb-2 text-gray-800">Tables</h1>
+           <br/>
+
+                    <!-- DataTales Example -->
+                    <div class="card shadow mb-4">
+                        <div class="card-header py-3">
+                            <h6 class="m-0 font-weight-bold text-primary">DataTables Example <a  class="btn btn-warning" style="float: right;" routerLink="/addUniversite">Ajouter Univeriste</a></h6>
+                            
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                    <thead>
+                                        <tr>
+                                            <th>Nom</th>
+                                            <th>Niveau</th>
+                                            <th>Description</th>
+                                            <th>Date Creation</th>
+                                            <th>Lieu</th>
+                                            <th>Departements</th>
+                                            <th>Supprimer</th>
+                                          
+                                        </tr>
+                                    </thead>
+                                   
+                                    <tbody>
+                                        <tr *ngFor="let universite of list;let index = index">
+                                            <td>{{universite.nomUniv | uppercase}}</td>
+                                            <td>{{universite.niveau}}</td>
+                                            <td>{{universite.description}}</td>
+                                            <td>{{universite.dateCreation | date:'short'}}</td>
+                                            <td>{{universite.lieu}}</td>
+                                            <td><h6>{{universite.departemnts.length}}</h6><button>Vois tous</button></td>
+                                            <td> <button (click)="deleteUniv(universite.idUniv)" type="button" class="btn btn-danger" ><i class="fa fa-trash" ></i></button> </td>
+                                          
+                                        </tr>
+                                        
+                                        
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- /.container-fluid -->
+
+            </div>
+            <!-- End of Main Content -->
+
+            <!-- Footer -->
+        
+            <!-- End of Footer -->
+
+        </div>
+        <!-- End of Content Wrapper -->
+
+    </div>
+    <!-- End of Page Wrapper -->
+
+    <!-- Scroll to Top Button-->
+
+
+
+
+    <!-- Bootstrap core JavaScript-->
+
+
+    <!-- Page level plugins -->
+
+
+</body>
