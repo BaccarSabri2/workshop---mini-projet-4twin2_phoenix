@@ -1,5 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+
+
+
+
+
+
 import { AddUniversiteAdminComponent } from './backOffice/add-universite-admin/add-universite-admin.component';
 
 import { DashbordComponent } from './backOffice/dashbord/dashbord.component';
@@ -26,9 +32,9 @@ const routes: Routes = [
   {path:'formations', loadChildren: () => import('./Pages/formation-module/formation/formation.module').then(m=>m.FormationModule) },
   {path:'universites', loadChildren: () => import('./Pages/universite/universite.module').then(m=>m.UniversiteModule) },
   {path:'home', component:HomeComponent},
-  {path:'joinus', component:JoinusComponent},
-  {path:'login', component:LoginComponent},
-  {path:'editprofile' ,component:EditProfileComponent} ,
+  { path: 'user', loadChildren: () => import('./Pages/user/user.module').then(m => m.UserModule) },
+
+
 
 ];
 

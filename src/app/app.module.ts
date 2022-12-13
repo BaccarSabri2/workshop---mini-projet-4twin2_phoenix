@@ -11,6 +11,9 @@ import { FormationComponent } from './Pages/formation/formation.component';
 import { HomeComponent } from './Pages/home/home.component';
 
 
+import { ReactiveFormsModule } from '@angular/forms';
+
+
 
 import { DashbordComponent } from './backOffice/dashbord/dashbord.component';
 import { NavbarBackooficeComponent } from './backOffice/navbar-backoofice/navbar-backoofice.component';
@@ -31,6 +34,7 @@ import { AddUniversiteAdminComponent } from './backOffice/add-universite-admin/a
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -40,6 +44,15 @@ import { AddUniversiteAdminComponent } from './backOffice/add-universite-admin/a
     HeroComponent,
     //FormationComponent,
     HomeComponent,
+
+
+
+
+
+
+ 
+
+
 
     DashbordComponent,
     NavbarBackooficeComponent,

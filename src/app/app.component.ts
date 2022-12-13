@@ -24,11 +24,14 @@ export class AppComponent {
     this.loadScript('../assets/lib/easing/easing.min.js');
 
     
+
+
     this.loadScript('../assets/js/main.js')
     this.loadScript('../assets/back/vendor/chart.js/Chart.min.js')
     this.loadScript('../assets/back/js/demo/chart-area-demo.js')
     this.loadScript('../assets/back/js/demo/chart-pie-demo.js')
   
+
 
 
   

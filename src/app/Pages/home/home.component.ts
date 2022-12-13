@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+
 import Swal from 'sweetalert2';
+
 
 @Component({
   selector: 'app-home',
@@ -11,6 +13,7 @@ export class HomeComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+
     if(localStorage.getItem("alert")){
       Swal.fire('Votre demande a été crée en succées!', '', 'success')
       localStorage.removeItem("alert");
@@ -19,6 +22,7 @@ export class HomeComponent implements OnInit {
       Swal.fire('Votre demande a été annuler!', '', 'success')
       localStorage.removeItem("cancel");
     }
+
   }
 
 }
