@@ -9,28 +9,19 @@ import { FooterComponent } from './Components/footer/footer.component';
 import { HeroComponent } from './Pages/hero/hero.component';
 import { FormationComponent } from './Pages/formation/formation.component';
 import { HomeComponent } from './Pages/home/home.component';
-
-
-import { ReactiveFormsModule } from '@angular/forms';
-
-
+import { HttpClientModule } from '@angular/common/http';
 
 import { DashbordComponent } from './backOffice/dashbord/dashbord.component';
 import { NavbarBackooficeComponent } from './backOffice/navbar-backoofice/navbar-backoofice.component';
 import { FooterBackOfficeComponent } from './backOffice/footer-back-office/footer-back-office.component';
+import { AddDepartementComponent } from './backOffice/add-departement/add-departement.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { UpadetDepartementComponent } from 'src/app/backOffice/upadet-departement/upadet-departement.component';
+import { ListDepartComponent } from 'src/app/backOffice/list-depart/list-depart.component';
 
 
 
 
-
-
-import { JoinusComponent } from './Pages/joinus/joinus.component';
-import { LoginComponent } from './Pages/login/login.component';
-import { EditProfileComponent } from './Pages/edit-profile/edit-profile.component';
-import { HttpClientModule } from '@angular/common/http';
-import { FormsModule } from '@angular/forms';
-import { UniversitesAdminComponent } from './backOffice/universites-admin/universites-admin.component';
-import { AddUniversiteAdminComponent } from './backOffice/add-universite-admin/add-universite-admin.component';
 
 
 
@@ -44,45 +35,28 @@ import { AddUniversiteAdminComponent } from './backOffice/add-universite-admin/a
     HeroComponent,
     //FormationComponent,
     HomeComponent,
-
-
-
-
-
-
- 
-
-
-
     DashbordComponent,
     NavbarBackooficeComponent,
     FooterBackOfficeComponent,
+    AddDepartementComponent,
+    UpadetDepartementComponent,
+    ListDepartComponent
  
   //  MyDemandesComponent,
   //  JoinDepartementComponent,
   
    // DepartementDetailComponent,
    
-
-    JoinusComponent,
-    LoginComponent,
-    EditProfileComponent,
-    UniversitesAdminComponent,
-    AddUniversiteAdminComponent,
-
   ],
   imports: [
-    FormsModule,
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-
+    FormsModule,
+    ReactiveFormsModule
 
    
   ],
-
-
-
   providers: [],
   bootstrap: [AppComponent]
 })

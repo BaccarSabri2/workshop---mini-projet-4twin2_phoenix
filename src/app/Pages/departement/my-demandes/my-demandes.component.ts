@@ -62,7 +62,7 @@ confirmButtonText: 'Cancel une Demande'
       if (result.isConfirmed) {
         this.DeptService.CancelDemande(this.etudiantId,idDepart).subscribe(
           res=>{
-            localStorage.setItem('cancel',"cancel");
+            Swal.fire('Votre demande a été annuler!', '', 'success')
             this.router.navigate(['/home'])
           }
           
