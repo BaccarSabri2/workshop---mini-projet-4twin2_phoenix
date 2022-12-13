@@ -66,7 +66,7 @@ export class JoinDepartementComponent implements OnInit {
                     if(res!=null){
                       this.dept=res;
                       console.log(this.dept)
-                      localStorage.setItem('alert',"alert");
+                      Swal.fire('Votre demande a été crée en succées!', '', 'success')
                       this.router.navigate(['/home'])
                     }else{
                       Swal.fire({

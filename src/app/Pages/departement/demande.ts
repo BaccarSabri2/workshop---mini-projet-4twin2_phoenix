@@ -1,3 +1,4 @@
+import { Etudiant } from "src/app/etudiant";
 import { Departements } from "./departements";
 
 export class Demande {
@@ -5,6 +6,7 @@ export class Demande {
     statut:string
     date:Date
     idDemande:number
+    etudiants:Etudiant
 
 
 }
