@@ -4,8 +4,17 @@ import { CommonModule } from '@angular/common';
 import { FormationRoutingModule } from './formation-routing.module';
 
 
+
+
+
+import { FormationComponent } from '../../formation/formation.component';
+
+
 @NgModule({
-  declarations: [],
+  declarations: [
+    FormationComponent
+  ],
+
   imports: [
     CommonModule,
     FormationRoutingModule

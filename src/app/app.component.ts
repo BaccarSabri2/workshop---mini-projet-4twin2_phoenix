@@ -9,7 +9,7 @@ export class AppComponent {
   title = 'kaddem';
 
   loadScript(url: string) {
-    const body = <HTMLDivElement> document.body;
+    const body = <HTMLDivElement>document.body;
     const script = document.createElement('script');
     script.innerHTML = '';
     script.src = url;
@@ -19,14 +19,25 @@ export class AppComponent {
   }
 
   ngOnInit() {
-    
-    
+
+
     this.loadScript('../assets/lib/easing/easing.min.js');
 
-    
+
     this.loadScript('../assets/js/main.js');
-  
-  
+
+
+
+    this.loadScript('../assets/js/main.js')
+    this.loadScript('../assets/back/vendor/chart.js/Chart.min.js')
+    this.loadScript('../assets/back/js/demo/chart-area-demo.js')
+    this.loadScript('../assets/back/js/demo/chart-pie-demo.js')
+
+
+
+
+
+
 
   }
 }

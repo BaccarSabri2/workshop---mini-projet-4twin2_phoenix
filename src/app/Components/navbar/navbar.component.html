@@ -39,9 +39,14 @@
                     <div class="navbar-nav py-0">
                         <a href="index.html" class="nav-item nav-link active">Home</a>
                         <a href="about.html" class="nav-item nav-link">About</a>
+
                         <a routerLink="/formation" class="nav-item nav-link">Formations</a>
                         <a routerLink="/EtudiantAdmin" class="nav-item nav-link">Dashbord</a>
                         <a href="teacher.html" class="nav-item nav-link">Teachers</a>
+
+                        <a routerLink="/formations" class="nav-item nav-link">Formations</a>
+                        <a routerLink="/universites" class="nav-item nav-link">Universites</a>
+
                         <div class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" data-toggle="dropdown">Blog</a>
                             <div class="dropdown-menu rounded-0 m-0">
@@ -50,27 +55,35 @@
                             </div>
                         </div>
                         <a href="contact.html" class="nav-item nav-link">Contact</a>
+
+                        <a routerLink="/user/joinus" class="btn btn-primary py-2 px-3 ml-auto d-none d-lg-block">Join
+                            Now</a>
+
+
+                        <button [routerLink]="['/user/login']" <a routerLink="/joinus"
+                            class="btn btn-primary py-2 px-3 ml-auto d-none d-lg-block">Join
+                            Now</a>
+                            <button [routerLink]="['./login']"
+                                class="btn btn-primary py-2 px-3 ml-auto d-none d-lg-block bg-dark"
+                                style="margin-left: 1%;">Login</button>
+
+
+
                     </div>
-                    <a routerLink="/user/joinus" class="btn btn-primary py-2 px-3 ml-auto d-none d-lg-block">Join
-                        Now</a>
 
+                    <a class="btn btn-outline" routerLink="/user/editprofile">
+                        <input type="submit" class="btn btn-primary py-2 px-3 ml-auto d-none d-lg-block bg-dark "
+                            name="btnAddMore" value="Edit Profile" />
 
-                    <button [routerLink]="['/user/login']"
-                        class="btn btn-primary py-2 px-3 ml-auto d-none d-lg-block bg-dark"
-                        style="margin-left: 1%;">Login</button>
+                        <a routerLink="/editprofile" class="btn btn-outline ">
 
-
-
-                </div>
-
-                <a class="btn btn-outline" routerLink="/user/editprofile">
-                    <input type="submit" class="btn btn-primary py-2 px-3 ml-auto d-none d-lg-block bg-dark "
-                        name="btnAddMore" value="Edit Profile" />
-                </a>
-                <a *ngIf="test==true">
-                    <button class="btn btn-primary py-2 px-3 ml-auto d-none d-lg-block"
-                        (click)="signOut()">signOut</button>
-                </a>
+                            <input type="submit" class="btn btn-primary py-2 px-3 ml-auto d-none d-lg-block bg-dark "
+                                name="btnAddMore" value="Edit Profile" />
+                        </a>
+                        <a *ngIf="test==true">
+                            <button class="btn btn-primary py-2 px-3 ml-auto d-none d-lg-block"
+                                (click)="signOut()">signOut</button>
+                        </a>
 
             </nav>
         </div>
@@ -79,4 +92,5 @@
 <br />
 <br />
 <br />
+
 <br />
