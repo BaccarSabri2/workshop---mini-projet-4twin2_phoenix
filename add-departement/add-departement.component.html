@@ -1,0 +1,109 @@
+
+<!-- Header End -->
+
+
+    <!-- Ajout Start -->
+    <div class="container-fluid py-5" style="margin-top: -120px;">
+        <div class="container py-5">
+
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="contact-form bg-secondary rounded p-5 couleur">
+                        <div class="text-center">
+                            <h5 class=" text-uppercase " ngClass="titreAjout">
+                            Ajouter un nouveau departement
+                            </h5>
+                        </div>
+                        <br/> <br/> <br/>
+                        <form [formGroup]="DepartForm">
+                            
+                                <div class="col" >
+                                    <input type="text"
+                                    class="form-control border"
+                                    placeholder=" Nom du Depart"
+                                    formControlName="nom"  />
+                                    <!-- {{DepartForm?.get('username')?.errors | json}}
+                                        //AFFICHER LES ERREURES
+                                     -->
+                                    <div *ngIf="DepartForm?.get('nom')?.invalid
+                                    && (DepartForm?.get('nom')?.dirty
+                                    || DepartForm?.get('nom')?.touched)" class="invalid-feedback d-block">
+                                      <div *ngIf="DepartForm?.get('nom')?.errors?.['required']">
+                                        Nom est obligatoire</div>
+                                    </div>
+                                  
+                                </div>
+                                <br/>
+
+                                <div class="col">
+                                    <input type="text"
+                                    class="form-control border"
+                                    placeholder="surNom"
+                                    formControlName="surNom"  />
+                                    <div *ngIf="DepartForm?.get('surNom')?.invalid
+                                    && (DepartForm?.get('surNom')?.dirty
+                                    || DepartForm?.get('surNom')?.touched)" class="invalid-feedback d-block">
+                                      <div *ngIf="DepartForm?.get('surNom')?.errors?.['required']">
+                                        Sur Nom est obligatoire</div>
+                                    </div>
+                                  
+                           
+                            <br/>
+
+                          
+                                <div class="col">
+                                    <textarea 
+                                    
+                                    placeholder="description"
+                                    formControlName="description" style="  width: 100%;
+                                    height: 150px;
+                                    padding: 12px 20px;
+                                    box-sizing: border-box;
+                                    border: 2px solid #ccc;
+                                    border-radius: 4px;
+                                    background-color: #f8f8f8;
+                                    font-size: 16px;
+                                    resize: none;">
+                                    
+                                    </textarea>
+                                 
+                                    <div *ngIf="DepartForm?.get('description')?.invalid
+                                    && (DepartForm?.get('description')?.dirty
+                                    || DepartForm?.get('description')?.touched)" class="invalid-feedback d-block">
+                                      <div *ngIf="DepartForm?.get('description')?.errors?.['required']">
+                                        Description est obligatoire</div>
+                                    </div>
+                                    <div *ngIf="DepartForm?.get('description')?.invalid
+                                    && (DepartForm?.get('description')?.dirty
+                                    || DepartForm?.get('description')?.touched)" class="invalid-feedback d-block">
+                                      <div *ngIf="DepartForm?.get('description')?.errors?.['minlength']?.requiredLength">
+                                        vous devez saisir au moins 30 caractéres </div>
+                                    </div>
+                                    <div *ngIf="DepartForm?.get('description')?.errors?.['pattern']" class="invalid-feedback d-block">
+                                        La description doit contenir que des lettre et des nombres </div>
+                                </div>
+                             
+                          
+                            </div>
+
+
+
+                           
+
+                            <div class="row">
+                                <div class="col">
+                                    <div class="text-center mt-5 my-3">
+                                        <button class="btn btn-primary py-3 px-5 "                                              
+                                                (click)="saveDept()"
+                                                [disabled]=" DepartForm.invalid ">Ajouter
+                                        </button>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
